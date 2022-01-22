@@ -1,0 +1,57 @@
+{
+	"$schema": "https://raw.githubusercontent.com/martinring/tmlanguage/master/tmlanguage.json",
+	"name": "Dialogue",
+	"patterns": [
+		{
+			"include": "#keywords"
+		},
+		{
+			"include": "#strings"
+		}
+	],
+	"repository": {
+		"keywords": {
+			"patterns": [{
+				"name": "keyword.control.dialogue",
+				"match": "\\b(name|goto|flag)\\b"
+			}]
+		},
+		"operators": {
+			"patterns": [{
+				"name": "keyword.operator.dialogue",
+				"match": ":"
+			}]
+		},
+		"numbers": {
+			"patterns": [{
+				"name": "constant.numeric.dialogue",
+				"match": "[0-9]"
+			}]
+		},
+		"strings": {
+			"name": "string.quoted.double.dialogue",
+			"begin": "\"",
+			"end": "\"",
+			"patterns": [
+				{
+					"name": "constant.character.escape.dialogue",
+					"match": "\\\\."
+				}
+			]
+		},
+		"comments": {
+			"patterns": [{
+				"name": "keyword.control.dialogue",
+				"match": "//.+"
+			}]
+		},
+		"identifier": {
+			"patterns": [{
+				"name": "keyword.control.dialogue",
+				"match": "[@]"
+
+			}]
+		}
+	},
+	"scopeName": "source.dlg"
+}
