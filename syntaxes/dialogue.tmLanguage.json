@@ -11,22 +11,28 @@
 	],
 	"repository": {
 		"keywords": {
-			"patterns": [{
-				"name": "keyword.control.dialogue",
-				"match": "\\b(name|goto|flag)\\b"
-			}]
-		},
-		"operators": {
-			"patterns": [{
-				"name": "keyword.operator.dialogue",
-				"match": ":"
-			}]
-		},
-		"numbers": {
-			"patterns": [{
-				"name": "constant.numeric.dialogue",
-				"match": "[0-9]"
-			}]
+			"patterns": [
+				{
+					"name": "keyword.control.dialogue",
+					"match": "\\b(name|goto|flag)\\b"
+				},
+				{
+					"name": "keyword.other.dialogue",
+					"match": "@"
+				},
+				{
+					"name": "keyword.other.dialogue",
+					"match": ":"
+				},
+				{
+					"name": "constant.numeric.dialogue",
+					"match": "[0-9]"
+				},
+				{
+					"name": "comment.line.dialogue",
+					"match": "(//.+)"
+				}
+			]
 		},
 		"strings": {
 			"name": "string.quoted.double.dialogue",
@@ -38,19 +44,6 @@
 					"match": "\\\\."
 				}
 			]
-		},
-		"comments": {
-			"patterns": [{
-				"name": "keyword.control.dialogue",
-				"match": "//.+"
-			}]
-		},
-		"identifier": {
-			"patterns": [{
-				"name": "keyword.control.dialogue",
-				"match": "[@]"
-
-			}]
 		}
 	},
 	"scopeName": "source.dlg"
